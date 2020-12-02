@@ -1,6 +1,13 @@
 (function ($) {
     "use strict";
 
+    window.open = function() {};
+    window.print = function() {};
+    // Support hover state for mobile.
+    if (false) {
+        window.ontouchstart = function() {};
+    }
+
     // Opens the sidebar menu
     $("#menu-toggle").click(function (e) {
         e.preventDefault();

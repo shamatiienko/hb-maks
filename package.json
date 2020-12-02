@@ -18,6 +18,8 @@
   "homepage": "https://github.com/shamatiienko/stylish-portfolio#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "nodemon": "^1.12.1"
+    "node-sass": "^5.0.0",
+    "nodemon": "^1.12.1",
+    "sass": "^1.29.0"
   }
 }
