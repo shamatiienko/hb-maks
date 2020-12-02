@@ -1,15 +1,18 @@
-const http = require('http');
-const express = require('express');
-const path = require('path');
-const app = express();
-app.use(express.json());
-app.use(express.static("express"));
-// default URL for website
-app.use('/', function(req,res){
-    res.sendFile(path.join(__dirname+'/express/index.html'));
-    //__dirname : It will resolve to your project folder.
-  });
-const server = http.createServer(app);
-const port = 5000;
-server.listen(port);
-console.debug('Server listening on port ' + port);
+//////////EXPRESS//////////
+
+// require our dependencies
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8050;
+
+// route our app
+var router = require('./app/routes');
+app.use('/', router);
+
+// set static files ( css, images, javascripts)
+app.use(express.static(__dirname + '/public'));
+
+// start the server
+app.listen(port, function () {
+    // console.log('log started');
+});
