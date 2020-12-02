@@ -18,9 +18,8 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body id="body">
+<body id="body" onload="playAudio()">
     <section id="cake">
-       
     
             <div class="cake">
               <div class="plate"></div>
@@ -35,11 +34,13 @@
                   <div class="flame"></div>
               </div>
           </div>
+
+          
           
            <link href="https://fonts.googleapis.com/css?family=Wendy+One" rel="stylesheet" type="text/css">
                   <div class="container">
                       <div class="balloon">
-                          <div><span>☺</span>
+                          <div><span>♥</span>
                           </div>
                           <div><span>B</span>
                           </div>
@@ -55,6 +56,8 @@
                        <!-- <h1>Sweety </h1> -->
           
                   </div>
+
+                  <img src="img/main-head.png" alt="" class="main-img">
     </section>
 
    
@@ -281,6 +284,17 @@
         </a>
     </footer> -->
 
+    <!-- Song  -->
+    <audio id="myAudio">
+        <source src="audio/hb-song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+      <!-- <p>Click the buttons to play or pause the audio.</p> -->
+      
+      <!-- <button onclick="playAudio()" type="button">Play Audio</button>
+      <button onclick="pauseAudio()" type="button">Pause Audio</button>  -->
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -292,6 +306,18 @@
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="js/common.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script>
+        var x = document.getElementById("myAudio"); 
+        
+        function playAudio() { 
+          x.play(); 
+        } 
+        
+        function pauseAudio() { 
+          x.pause(); 
+        } 
+        </script>
 </body>
+
 
 </html>
